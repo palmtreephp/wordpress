@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "palmtree/argparser": "~1.0.0"
+    "palmtree/argparser": "~1.0.0",
     "palmtree/http": "~1.0.0"
   },
   "autoload": {
