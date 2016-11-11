@@ -2,9 +2,8 @@
 
 namespace Palmtree\WordPress\Form;
 
-use AndyPalmer\FormLogger;
 use Palmtree\Form\Form;
-use TixAstronauta\AccIp\AccIp;
+use Palmtree\Http\RemoteUser;
 
 abstract class AbstractForm {
 	/** @var  Form $form */
@@ -76,10 +75,10 @@ abstract class AbstractForm {
 
 		$message .= "----- END OF MESSAGE -----\n\n";
 
-		$accIp = new AccIp();
+		$user = new RemoteUser();
 
-		$message .= "IP Address: " . $accIp->getIpAddress() . "\n";
-		$message .= "User Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
+		$message .= 'IP Address: ' . $user->getIpAddress() . "\n";
+		$message .= 'User Agent: ' . $user->getUserAgent() . "\n";
 
 		return $message;
 	}

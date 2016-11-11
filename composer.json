@@ -11,7 +11,9 @@
   ],
   "require": {
     "palmtree/argparser": "~1.0.0",
-    "palmtree/http": "~1.0.0"
+    "palmtree/http": "~1.0.0",
+    "monolog/monolog": "^1.21",
+    "swiftmailer/swiftmailer": "^5.4"
   },
   "autoload": {
     "psr-4": {
