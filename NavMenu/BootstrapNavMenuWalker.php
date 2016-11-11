@@ -25,7 +25,7 @@ class BootstrapNavMenuWalker extends \Walker_Nav_Menu {
 		$page_for_posts_id = (int) get_option( 'page_for_posts', 0 );
 
 		if ( (int) $item->object_id === $page_for_posts_id ) {
-			if ( is_category() || is_singular( 'post' ) || is_home() ) {
+			if ( is_category() || is_tag() || is_singular( 'post' ) || is_home() ) {
 				$active = true;
 			}
 		} else {
