@@ -4,6 +4,7 @@ namespace Palmtree\WordPress\CustomPostType;
 
 use Palmtree\WordPress\AbstractCollection;
 
-class CustomPostTypeCollection extends AbstractCollection  {
+class CustomPostTypeCollection extends AbstractCollection {
+	protected $itemClass = CustomPostType::class;
 
 }

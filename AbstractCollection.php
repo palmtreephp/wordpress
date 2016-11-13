@@ -4,8 +4,12 @@ namespace Palmtree\WordPress;
 
 class AbstractCollection implements \ArrayAccess {
 	protected $items = [];
+	protected $itemClass = null;
 
 	public function addItem( $key, $item ) {
+		if ( class_exists( $this->itemClass ) && ! $item instanceof $this->itemClass ) {
+			$item = new $this->itemClass( $item );
+		}
 		$this->items[ $key ] = $item;
 	}
 
