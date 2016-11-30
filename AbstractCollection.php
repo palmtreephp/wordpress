@@ -11,16 +11,22 @@ class AbstractCollection implements \ArrayAccess {
 			$item = new $this->itemClass( $item );
 		}
 		$this->items[ $key ] = $item;
+
+		return $this;
 	}
 
 	public function addItems( array $items ) {
 		foreach ( $items as $key => $item ) {
 			$this->addItem( $key, $item );
 		}
+
+		return $this;
 	}
 
 	public function removeItem( $key ) {
 		unset( $this->items[ $key ] );
+
+		return $this;
 	}
 
 	public function getItems() {
