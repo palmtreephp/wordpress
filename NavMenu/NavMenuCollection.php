@@ -20,7 +20,7 @@ class NavMenuCollection extends AbstractCollection  {
 	 * @param string $menu
 	 * @param array  $args
 	 */
-	public function navMenu( $menu = '', $args = array() ) {
+	public function navMenu( $menu = '', $args = [] ) {
 		$defaults = [
 			'menu'       => $menu,
 			'menu_class' => 'clearfix',
